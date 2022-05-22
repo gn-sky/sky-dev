@@ -1,4 +1,4 @@
-import { getGreeting } from '../support/app.po';
+import { getAddTruckButton, getGreeting, getTrucks } from '../support/app.po';
 
 describe('trucks', () => {
   beforeEach(() => cy.visit('/'));
@@ -8,6 +8,12 @@ describe('trucks', () => {
     cy.login('my-email@something.com', 'myPassword');
 
     // Function helper example, see `../support/app.po.ts` file
-    getGreeting().contains('Welcome trucks');
+    getGreeting().contains('Trucks');
+  });
+
+  it('should display trucks', () => {
+    getTrucks().should(t => expect(t.length).equal(2));
+    getAddTruckButton().click();
+    getTrucks().should(t => expect(t.length).equal(3));
   });
 });
