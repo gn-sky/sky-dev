@@ -1,1 +1,7 @@
-<skydev-nx-welcome></skydev-nx-welcome>
+<!-- <skydev-nx-welcome></skydev-nx-welcome> -->
+<h1>Trucks</h1>
+
+<button class="add-truck" (click)="addTruck()">Add truck</button>
+<ul>
+    <li *ngFor="let t of trucks" class="truck">{{ t.number }}</li>
+</ul>
