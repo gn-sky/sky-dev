@@ -5,6 +5,7 @@
     "api": "apps/api",
     "data": "libs/data",
     "trucks": "apps/trucks",
-    "trucks-e2e": "apps/trucks-e2e"
+    "trucks-e2e": "apps/trucks-e2e",
+    "ui": "libs/ui"
   }
 }
