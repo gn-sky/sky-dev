@@ -6,7 +6,7 @@ interface Truck {
 
 @Injectable()
 export class AppService {
-  trucks: Truck[] = [{ number: 'S600' }, { number: '2'}];
+  trucks: Truck[] = [{ number: 'Truck S600' }, { number: 'Truck 2'}];
 
   getTrucks(): Truck[] {
     return this.trucks;

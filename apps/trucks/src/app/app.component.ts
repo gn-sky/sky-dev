@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { Observable, take } from 'rxjs';
 
 interface Truck {
   number: string;
@@ -11,10 +13,21 @@ interface Truck {
 })
 export class AppComponent {
   title = 'trucks';
-  trucks: Truck[] = [{ number: 'S600' }, { number: '2'}];
+  trucks$: Observable<Truck[]>;
 
-  addTruck() {
-    const truck = { number: '3' };
-    this.trucks.push(truck);
+  constructor(private readonly http: HttpClient) {
+    this.trucks$ = this.fetch();
+  }
+
+  addTruck(): void {
+    this.http.post('/api/addTruck', {}).pipe(
+      take(1)
+    ).subscribe(() => {
+      this.trucks$ = this.fetch();
+    });
+  }
+
+  private fetch(): Observable<Truck[]> {
+    return this.http.get<Truck[]>('/api/trucks');
   }
 }
