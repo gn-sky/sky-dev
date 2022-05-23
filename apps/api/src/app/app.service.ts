@@ -1,8 +1,5 @@
 import { Injectable } from '@nestjs/common';
-
-interface Truck {
-  number: string;
-}
+import { Truck } from '@skydev/data';
 
 @Injectable()
 export class AppService {

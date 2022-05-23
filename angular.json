@@ -3,6 +3,7 @@
   "version": 2,
   "projects": {
     "api": "apps/api",
+    "data": "libs/data",
     "trucks": "apps/trucks",
     "trucks-e2e": "apps/trucks-e2e"
   }
