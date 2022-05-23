@@ -3,5 +3,5 @@
 
 <button class="add-truck" (click)="addTruck()">Add truck</button>
 <ul>
-    <li *ngFor="let t of trucks" class="truck">{{ t.number }}</li>
+    <li *ngFor="let t of (trucks$ | async)" class="truck">{{ t.number }}</li>
 </ul>
