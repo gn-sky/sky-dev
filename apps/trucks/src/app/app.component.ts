@@ -1,10 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { Truck } from '@skydev/data';
 import { Observable, take } from 'rxjs';
-
-interface Truck {
-  number: string;
-}
 
 @Component({
   selector: 'skydev-root',
