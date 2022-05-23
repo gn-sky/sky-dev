@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@skydev/data": ["libs/data/src/index.ts"]
+      "@skydev/data": ["libs/data/src/index.ts"],
+      "@skydev/ui": ["libs/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
